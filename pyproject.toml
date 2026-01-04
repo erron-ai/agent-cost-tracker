@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-cost-tracker"
+version = "0.1.0"
+description = "Real-time cost monitoring, budgeting, and alerts for agent workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/agent-cost-tracker"
+Issues = "https://github.com/erron-ai/agent-cost-tracker/issues"
+
+[project.scripts]
+agent-cost-tracker = "agent_cost_tracker.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
